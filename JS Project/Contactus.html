@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+    }
+    var y = document.forms["myForm"]["fEmail"].value;
+  if (y == "" || y == null) {
+    alert("Email must be filled out");
+    return false;}
+    else{
+ alert("Thank you for contact us, We will get back to you soon😊");
+return true; 
+}}
+
+
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+   <input type="text" name="fname" placeholder="Name">
+  <input type="text" name="fEmail" placeholder="Email"><br/></br>
+  <input type="number" id="Mobile Number" name="Mobile Number" placeholder="Mobile Number"><br/></br>
+
+  <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Comment....."></textarea></br>
+  <input type="submit" value="Submit"> 
+</form>
+
+</body>
+</html>
